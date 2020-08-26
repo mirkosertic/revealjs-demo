@@ -3,16 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<title>reveal.js</title>
-
+		<title>reveal.js example slides</title>
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/night.css" id="theme">
-
-		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="lib/css/monokai.css" id="highlight-theme">
-
 		<link rel="stylesheet" href="plugin/reveal-run-in-terminal.css" />
 		<style>
 			section[data-run-in-terminal] .container {
@@ -42,7 +37,30 @@
 						data-run-in-terminal-bin="node">
 					<h2>Here Is A Great Example</h2>
 				</section>
-				<section>Slide 2.1</section>
+				<section>
+					<h2>Lala</h2>
+					<pre>
+						<code data-line-numbers="3-5">
+public class Lala {
+	public static void main(String[] args) {
+		System.out.println("lala");
+	}
+}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h2>Top</h2>
+					<section>
+						<h3>A</h3>
+					</section>
+					<section>
+						<h3>B</h3>
+					</section>
+					<section>
+						<h3>C</h3>
+					</section>
+				</section>
 			</div>
 		</div>
 
@@ -53,13 +71,11 @@
 		<script src="plugin/highlight/highlight.js"></script>
 		<script src="plugin/zoom-js/zoom.js"></script>
 		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ],
+				navigationMode: "linear",
+				controls: false,
 				dependencies: [
 					{
 						src: 'plugin/reveal-run-in-terminal.js',
