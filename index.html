@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="lib/css/monokai.css" id="highlight-theme">
+
+		<link rel="stylesheet" href="plugin/reveal-run-in-terminal.css" />
+		<style>
+			section[data-run-in-terminal] .container {
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>h1. Header</h1>
+					<p>
+						<ul>
+							<li>Item A</li>
+							<li>item B</li>
+							<li>Item C</li>
+						</ul>
+					</p>
+					<p>This is a test</p>
+					<p>This is another test</p>
+					<aside class="notes">
+						Shhh, these are your private notes 📝
+					</aside>
+				</section>
+				<section data-run-in-terminal="code/some-great-example.js"
+						data-run-in-terminal-bin="node">
+					<h2>Here Is A Great Example</h2>
+				</section>
+				<section>Slide 2.1</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/marked.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom-js/zoom.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ],
+				dependencies: [
+					{
+						src: 'plugin/reveal-run-in-terminal.js',
+						callback: function() {
+							RunInTerminal.init();
+						},
+						async: true,
+					},
+					// more plugins
+				],
+			});
+		</script>
+	</body>
+</html>
