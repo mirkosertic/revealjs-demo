@@ -4,20 +4,20 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "decktape": "^3.1.0",
     "express": "^4.14.0",
     "reveal-run-in-terminal": "^1.0.3",
     "reveal.js": "^3.9.2",
     "yargs": "^15.1.0"
   },
   "devDependencies": {
-    "browserify": "^13.1.0",
     "nodemon": "^2.0.4",
-    "np": "^6.4.0"
+    "np": "^6.4.0",
+    "browser-sync": "^2.26.12",
+    "decktape": "^3.1.0"
   },
   "scripts": {
     "start": "node app.js",
-    "develop": "nodemon app.js",
+    "develop": "node app.js & browser-sync start --proxy 'localhost:5000' --files '.'",
     "pdf": "decktape generic --key=ArrowRight http://localhost:5000 deck.pdf"
   },
   "author": {
